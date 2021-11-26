@@ -15,11 +15,12 @@ void menumatriz(){
     printf("\nEscolha uma opcao:  ");
 }
 
-void menu(){
+void menu(char mat[10][10]){
     //procedimento para imprimir o menu escolha
     printf("\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n");
     printf("+-+-+-+-+-+-+-+-+-+-+- Escolha uma opcao -+-+-+-+-+-+-+-+-+-+-+\n");
     printf("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n");
+    imprimirmatriz(mat);
     printf("\n1 - Esquerda para direita");
     printf("\n2 - Direita para esquerda");
     printf("\n3 - Baixo para cima");
@@ -268,7 +269,7 @@ if((resnum0 == 1)||(resnum0==2)){
     system("cls");
     do{
         
-        menu(); 
+        menu(mat); 
         /*"setbuf" aqui para limpar caso o usuario digite uma letra e 
         guardar no buffer o valor de enter, ISSO EVITA BUGS*/
         setbuf(stdin,NULL);
